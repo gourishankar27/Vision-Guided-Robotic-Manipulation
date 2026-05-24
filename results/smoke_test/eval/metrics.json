@@ -1,0 +1,8 @@
+{
+  "checkpoint": "results/smoke_test/checkpoints/best.pt",
+  "traj_mse_mean": 0.0007935902685858309,
+  "traj_mse_median": 9.183368092635646e-05,
+  "mass_mae": 0.6996742486953735,
+  "restitution_mae": 0.1745663583278656,
+  "friction_mae": 0.14693742990493774
+}
