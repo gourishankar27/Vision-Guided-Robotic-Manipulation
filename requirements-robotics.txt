@@ -1,0 +1,3 @@
+-r requirements.txt
+# Optional accelerated kernels. The code falls back to PyTorch if Warp is absent.
+warp-lang>=1.9

@@ -1,0 +1,9 @@
+# Install this in a dedicated Python environment that matches the Isaac Sim docs.
+# Example:
+#   python3.12 -m venv env_isaacsim
+#   source env_isaacsim/bin/activate
+#   pip install --upgrade pip
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+#   pip install -r requirements-isaac-sim.txt --extra-index-url https://pypi.nvidia.com
+isaacsim[all,extscache]==6.0.0
+imageio>=2.31
