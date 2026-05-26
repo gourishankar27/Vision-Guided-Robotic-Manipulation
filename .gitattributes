@@ -1,0 +1,14 @@
+# Keep generated/binary artifacts out of text diffs if they are ever force-added.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.npz binary
+*.npy binary
+*.pt binary
+*.pth binary
+*.ckpt binary
+*.usd binary
+*.usda text
+*.usdc binary
+*.usdz binary
+*.mp4 binary

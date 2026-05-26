@@ -1,0 +1,98 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+env_isaacsim/
+dl/
+.python-version
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+logs/
+wandb/
+tensorboard/
+lightning_logs/
+mlruns/
+
+# Generated training outputs
+results/*
+!results/.gitkeep
+runs/
+outputs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
+*.trt
+*.safetensors
+
+# Datasets and collected simulator data
+datasets/*
+!datasets/.gitkeep
+**/frames/
+**/rgb_*.png
+**/depth_*.png
+**/seg_*.png
+**/episode.npz
+**/index.jsonl
+**/all_index.jsonl
+*.npz
+*.npy
+*.h5
+*.hdf5
+*.zarr/
+*.parquet
+*.arrow
+
+# Isaac Sim / Omniverse generated files
+*.usd
+*.usda
+*.usdc
+*.usdz
+*.bak
+*.lock
+.omniverse/
+ov/
+kit/logs/
+
+# Rendered media
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.gif
+*.webm
+*.exr
+*.hdr
+
+# Local secrets/config overrides
+.env
+.env.*
+*.local.yaml
+*.local.yml
