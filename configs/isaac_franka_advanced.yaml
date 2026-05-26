@@ -27,9 +27,12 @@ data:
   horizon: 8
   stride: 1
   val_fraction: 0.2
-  split_mode: temporal     # temporal = hard future holdout, random = easier debugging
+  split_mode: episode      # episode = honest holdout by entire Isaac episodes
   max_windows: null
-  require_contiguous_steps: false
+  require_contiguous_steps: true
+  expected_step_delta: null   # null means infer any constant positive step spacing per window
+  max_ee_step: 0.25           # meters; filters reset/teleport windows
+  max_q_step: 1.50            # radians L2; filters robot reset windows
 
 model:
   feature_dim: 192

@@ -186,3 +186,17 @@ python train_isaac_franka_advanced.py --config configs\isaac_franka_advanced.yam
 ```
 
 See `docs/ADVANCED_FRANKA_TRAINING.md` for details.
+
+## Git/data hygiene
+
+Generated Isaac Sim datasets, frames, checkpoints, and training outputs are intentionally ignored by Git. Keep only source code, configs, docs, and small placeholders in version control.
+
+Useful cleanup commands:
+
+```bash
+python tools/clean_generated_data.py        # dry run
+python tools/clean_generated_data.py --yes  # delete generated data locally
+```
+
+See `docs/GIT_DATA_HYGIENE.md` for removing already-tracked artifacts from Git.
+

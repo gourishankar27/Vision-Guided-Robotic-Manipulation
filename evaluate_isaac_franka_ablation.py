@@ -28,6 +28,10 @@ def _build_dataset(config: Dict[str, Any], split: str) -> IsaacFrankaSequenceDat
         split_mode=str(data_cfg.get("split_mode", "temporal")),
         max_windows=data_cfg.get("max_windows"),
         cache_images=bool(data_cfg.get("cache_images", False)),
+        require_contiguous_steps=bool(data_cfg.get("require_contiguous_steps", False)),
+        expected_step_delta=data_cfg.get("expected_step_delta"),
+        max_ee_step=data_cfg.get("max_ee_step"),
+        max_q_step=data_cfg.get("max_q_step"),
         image_preprocess=str(data_cfg.get("image_preprocess", "none")),
     )
 

@@ -38,6 +38,9 @@ def build_dataloaders(config: Dict[str, Any]) -> tuple[DataLoader, DataLoader, i
         max_windows=data_cfg.get("max_windows"),
         cache_images=bool(data_cfg.get("cache_images", False)),
         require_contiguous_steps=bool(data_cfg.get("require_contiguous_steps", False)),
+        expected_step_delta=data_cfg.get("expected_step_delta"),
+        max_ee_step=data_cfg.get("max_ee_step"),
+        max_q_step=data_cfg.get("max_q_step"),
         image_preprocess=str(data_cfg.get("image_preprocess", "none")),
     )
     aug_cfg = dict(
@@ -283,6 +286,8 @@ def main() -> None:
         f"Temporal Isaac windows: train={len(train_loader.dataset)} val={len(val_loader.dataset)} "
         f"dof={dof} context={config['data'].get('context_len')} horizon={config['data'].get('horizon')}"
     )
+    if hasattr(train_loader.dataset, "skipped_windows"):
+        print(f"Skipped invalid windows: {train_loader.dataset.skipped_windows}")
     print(f"Trainable parameters: {count_parameters(model) + (0 if fk_module is None else count_parameters(fk_module)):,}")
 
     rows: list[Dict[str, float]] = []
