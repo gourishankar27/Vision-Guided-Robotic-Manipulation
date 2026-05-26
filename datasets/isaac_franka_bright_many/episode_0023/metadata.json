@@ -1,0 +1,22 @@
+{
+  "camera_view": "diag",
+  "camera_eye": [
+    1.2000000476837158,
+    -1.2000000476837158,
+    0.949999988079071
+  ],
+  "camera_target": [
+    0.07999999821186066,
+    0.019999999552965164,
+    0.18000000715255737
+  ],
+  "lighting": {
+    "lighting": "studio",
+    "lighting_factor": 1.6573313545987678
+  },
+  "width": 640,
+  "height": 480,
+  "mean_frame_brightness": 232.53906116862643,
+  "min_frame_brightness": 231.81088541666668,
+  "max_frame_brightness": 234.5840017361111
+}

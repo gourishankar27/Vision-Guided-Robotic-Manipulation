@@ -168,3 +168,21 @@ python examples/tiny_splat_demo.py --output results/splat_demo/toy_splat.png
 ```
 
 `src/splatting/gaussian_splatting.py` is a minimal differentiable PyTorch renderer for wiring visual losses into the project. For production-scale 3DGS, replace it with the official CUDA rasterizer or a maintained 3DGS package.
+
+## v3 advanced Isaac Franka path
+
+The v3 extension adds a temporal/multi-step Isaac Franka training path:
+
+```bat
+python train_isaac_franka_advanced.py --config configs\isaac_franka_advanced.yaml --index datasets\isaac_franka_v2\index.jsonl --epochs 10 --output-dir results\isaac_franka_advanced_single
+```
+
+For better results, collect multiple randomized Isaac Sim episodes and train on the merged index:
+
+```bat
+python scripts\isaac_sim\collect_many_franka_episodes.py --headless --episodes 20 --root-dir datasets\isaac_franka_many
+python scripts\isaac_sim\merge_episode_indices.py --root-dir datasets\isaac_franka_many --output datasets\isaac_franka_many\all_index.jsonl
+python train_isaac_franka_advanced.py --config configs\isaac_franka_advanced.yaml --index datasets\isaac_franka_many\all_index.jsonl --epochs 80 --output-dir results\isaac_franka_advanced_many
+```
+
+See `docs/ADVANCED_FRANKA_TRAINING.md` for details.

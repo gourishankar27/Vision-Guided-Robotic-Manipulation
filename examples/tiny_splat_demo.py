@@ -13,12 +13,6 @@ import torch
 
 from src.splatting import GaussianSplatRenderer, create_toy_gaussian_scene
 
-"""
-
-    python examples/tiny_splat_demo.py --output results/splat_demo/toy_splat.png --image-size 128
-
-"""
-
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Render a tiny differentiable Gaussian splat scene.")

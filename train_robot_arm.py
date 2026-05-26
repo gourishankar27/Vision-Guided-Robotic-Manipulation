@@ -15,14 +15,6 @@ from src.robotics.plotting import save_arm_reach_plot
 from src.renderer import save_tensor_image
 from src.utils import count_parameters, configure_torch_runtime, ensure_dir, get_device, load_config, save_config, set_seed
 
-'''
-
-python train_robot_arm.py --config configs/robot_arm.yaml --epochs 3 --output-dir results/robot_arm_smoke
-
-
-
-'''
-
 
 def build_dataloaders(config: Dict[str, Any]) -> tuple[DataLoader, DataLoader]:
     data_cfg = config["data"]

@@ -5,3 +5,4 @@ PyYAML>=6.0
 tqdm>=4.66
 jupyter>=1.0
 imageio>=2.31
+pandas>=2.0
